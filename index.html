@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Digital Tasbih Counter</title>
+  <meta name="description" content="Digital Tasbih Counter - A simple and easy-to-use digital tasbih for counting dhikr.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f5;
+      color: #173b2b;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #174f38;
+      color: white;
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    header h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 17px;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 30px auto;
+      padding: 0 18px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 22px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    }
+
+    .counter {
+      text-align: center;
+    }
+
+    .count {
+      font-size: 70px;
+      font-weight: bold;
+      margin: 20px 0;
+      color: #174f38;
+    }
+
+    button {
+      border: none;
+      border-radius: 12px;
+      padding: 14px 28px;
+      margin: 6px;
+      font-size: 17px;
+      cursor: pointer;
+    }
+
+    .count-btn {
+      background: #174f38;
+      color: white;
+    }
+
+    .reset-btn {
+      background: #e5e9e7;
+      color: #173b2b;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    h2 {
+      margin-bottom: 12px;
+      color: #174f38;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      color: #66736d;
+      font-size: 14px;
+    }
+
+    a {
+      color: #174f38;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Digital Tasbih Counter</h1>
+    <p>A simple digital counter for your daily dhikr.</p>
+  </header>
+
+  <main class="container">
+
+    <section class="card counter">
+      <h2>Tasbih Counter</h2>
+
+      <div id="count" class="count">0</div>
+
+      <button class="count-btn" onclick="increaseCount()">
+        + Count
+      </button>
+
+      <button class="reset-btn" onclick="resetCount()">
+        Reset
+      </button>
+    </section>
+
+    <section class="card">
+      <h2>About Digital Tasbih Counter</h2>
+
+      <p>
+        Digital Tasbih Counter is a simple and easy-to-use counting tool
+        designed to help users keep track of their dhikr and tasbih counts.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Features</h2>
+
+      <p>• Simple and clean interface</p>
+      <p>• Easy one-tap counting</p>
+      <p>• Reset counter whenever needed</p>
+      <p>• Works on mobile and desktop browsers</p>
+    </section>
+
+    <section class="card">
+      <h2>Privacy</h2>
+
+      <p>
+        This website does not require users to create an account.
+        The counter operates directly in the browser.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Digital Tasbih Counter. All rights reserved.
+  </footer>
+
+  <script>
+    let count = 0;
+
+    function increaseCount() {
+      count++;
+      document.getElementById("count").textContent = count;
+    }
+
+    function resetCount() {
+      count = 0;
+      document.getElementById("count").textContent = count;
+    }
+  </script>
+
+</body>
+</html>
